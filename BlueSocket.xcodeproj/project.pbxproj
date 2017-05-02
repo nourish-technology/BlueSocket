@@ -19,6 +19,10 @@
 		8CC36DFA1C4EA1BE00BAA659 /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F4C041C4E8630008B2B0A /* SocketUtils.swift */; };
 		8CC7217B1D4BCB1D00F5FD19 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8CC7217A1D4BCB1D00F5FD19 /* LICENSE */; };
 		8CF04E291D4FCE4A00C27814 /* SocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC721761D4BCA9400F5FD19 /* SocketTests.swift */; };
+		98C062DE1EB82D2900D75233 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F4C031C4E8630008B2B0A /* Socket.swift */; };
+		98C062DF1EB82D2900D75233 /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F4C021C4E8630008B2B0A /* SocketProtocols.swift */; };
+		98C062E01EB82D2900D75233 /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F4C041C4E8630008B2B0A /* SocketUtils.swift */; };
+		98C062E11EB82D3500D75233 /* Socket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C0F4BF91C4E84CC008B2B0A /* Socket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,7 @@
 		8CC721781D4BCAA600F5FD19 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = Tests/LinuxMain.swift; sourceTree = "<group>"; };
 		8CC7217A1D4BCB1D00F5FD19 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8CF04E231D4BD03D00C27814 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/SocketTests/Info.plist; sourceTree = "<group>"; };
+		98C062D61EB82D0500D75233 /* Socket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Socket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8CC36DFB1C4EA1BE00BAA659 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98C062D21EB82D0500D75233 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,6 +108,7 @@
 				8C0F4BF61C4E84CC008B2B0A /* Socket.framework */,
 				8CC36E021C4EA1BE00BAA659 /* Socket.framework */,
 				8CA9B1631C98A00400E607FB /* SocketTests.xctest */,
+				98C062D61EB82D0500D75233 /* Socket.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +170,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		98C062D31EB82D0500D75233 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C062E11EB82D3500D75233 /* Socket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -214,6 +235,24 @@
 			productReference = 8CC36E021C4EA1BE00BAA659 /* Socket.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		98C062D51EB82D0500D75233 /* Socket-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98C062DD1EB82D0600D75233 /* Build configuration list for PBXNativeTarget "Socket-tvOS" */;
+			buildPhases = (
+				98C062D11EB82D0500D75233 /* Sources */,
+				98C062D21EB82D0500D75233 /* Frameworks */,
+				98C062D31EB82D0500D75233 /* Headers */,
+				98C062D41EB82D0500D75233 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Socket-tvOS";
+			productName = "Socket-tvOS";
+			productReference = 98C062D61EB82D0500D75233 /* Socket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,6 +272,10 @@
 					8CC36DF61C4EA1BE00BAA659 = {
 						DevelopmentTeam = 2ZB889ETZ7;
 					};
+					98C062D51EB82D0500D75233 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Manual;
+					};
 				};
 			};
 			buildConfigurationList = 8C0F4BF01C4E84CC008B2B0A /* Build configuration list for PBXProject "BlueSocket" */;
@@ -250,6 +293,7 @@
 				8C0F4BF51C4E84CC008B2B0A /* Socket */,
 				8CC36DF61C4EA1BE00BAA659 /* Socket-iOS */,
 				8CA9B1621C98A00400E607FB /* SocketTests */,
+				98C062D51EB82D0500D75233 /* Socket-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +316,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8CC36DFE1C4EA1BE00BAA659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98C062D41EB82D0500D75233 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,6 +358,16 @@
 				8CC36DF81C4EA1BE00BAA659 /* SocketProtocols.swift in Sources */,
 				8CC36DF91C4EA1BE00BAA659 /* Socket.swift in Sources */,
 				8CC36DFA1C4EA1BE00BAA659 /* SocketUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98C062D11EB82D0500D75233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C062E01EB82D2900D75233 /* SocketUtils.swift in Sources */,
+				98C062DF1EB82D2900D75233 /* SocketProtocols.swift in Sources */,
+				98C062DE1EB82D2900D75233 /* Socket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +593,61 @@
 			};
 			name = Release;
 		};
+		98C062DB1EB82D0600D75233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.nourish.Socket-tvOS";
+				PRODUCT_NAME = Socket;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		98C062DC1EB82D0600D75233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.nourish.Socket-tvOS";
+				PRODUCT_NAME = Socket;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -570,6 +686,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		98C062DD1EB82D0600D75233 /* Build configuration list for PBXNativeTarget "Socket-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98C062DB1EB82D0600D75233 /* Debug */,
+				98C062DC1EB82D0600D75233 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
